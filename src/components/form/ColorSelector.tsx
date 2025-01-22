@@ -30,11 +30,14 @@ export default function ColorSelector({
               checked={selectedColor === color}
             />
             <span
-              className={`block w-10 h-10 rounded-full cursor-pointer bg-${color}-500 ${
+              className={`block w-10 h-10 rounded-full cursor-pointer ${
                 selectedColor === color ? "border-4 border-white" : ""
               } 
               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}
               aria-label={`${color} color option`}
+              style={{
+                backgroundColor: color,
+              }}
             ></span>
           </label>
         ))}
